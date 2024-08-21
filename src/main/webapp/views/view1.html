@@ -3,18 +3,80 @@
 	<head>
 		<meta charset="UTF-8">
 		<title>Luna Web</title>
+		<style>
+	      body {
+	        font-family: Arial, sans-serif;
+	        line-height: 1.6;
+	        color: #333;
+	        max-width: 800px;
+	        margin: 0 auto;
+	        padding: 20px;
+	        background-color: #f4f4f4;
+	      }
+	      h1 {
+	        color: #2c3e50;
+	        text-align: center;
+	        margin-bottom: 20px;
+	      }
+	      hr {
+	        border: 0;
+	        height: 1px;
+	        background-image: linear-gradient(
+	          to right,
+	          rgba(0, 0, 0, 0),
+	          rgba(0, 0, 0, 0.75),
+	          rgba(0, 0, 0, 0)
+	        );
+	        margin: 20px 0;
+	      }
+	      form {
+	        background-color: #fff;
+	        padding: 20px;
+	        border-radius: 8px;
+	        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	      }
+	      input[type="text"] {
+	        width: 60px;
+	        padding: 5px;
+	        margin: 0 5px;
+	        border: 1px solid #ddd;
+	        border-radius: 4px;
+	      }
+	      input[type="submit"] {
+	        background-color: #3498db;
+	        color: white;
+	        border: none;
+	        padding: 6px 12px;
+	        border-radius: 4px;
+	        cursor: pointer;
+	        transition: background-color 0.3s;
+	      }
+	      input[type="submit"]:hover {
+	        background-color: #2980b9;
+	      }
+	      span {
+	        margin-left: 10px;
+	        font-weight: bold;
+	      }
+	      footer {
+	        text-align: center;
+	        margin-top: 20px;
+	        color: #7f8c8d;
+	        font-size: 0.9em;
+	      }
+    </style>
 	</head>
 	<body>
 		<h1>Luna Big Company</h1>
 		<hr>
-		<form action='Luna06'>
-			<input name='x' />	
+		<form action='Luna15'>
+			<input name='x' value="%s" placeholder="number1" />	
 			+
-			<input name='y' />
+			<input name='y' value="%s" placeholder="number2" />
 			<input type='submit' value='=' />
-			<span></span>
+			<span>%s</span>
 		</form>
 		<hr>
-		Copyleft 2024....
+		Copyleft 2024 Luna Big Company. All rights reversed.
 	</body>
 </html>
