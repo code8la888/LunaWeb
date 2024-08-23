@@ -23,5 +23,9 @@
 	</head>
 	<body>
 		Name: ${name11}<br>
+		Name1: ${pageScope.name11}<br>
+		Name2: ${requestScope.name11}<br>
+		Name3: ${sessionScope.name11}<br>
+		Name4: ${applicationScope.name11}<br>
 	</body>
 </html>

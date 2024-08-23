@@ -37,7 +37,9 @@ public class LunaUtils {
 		} catch (Exception e) {
 			return"";
 		}
+	}
 	
-		
+	public static int createScore() {
+		return (int)(Math.random()*100+1);
 	}
 }
