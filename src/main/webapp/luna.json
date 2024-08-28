@@ -1,0 +1,59 @@
+{
+	OrderID : 123,
+	CustomID : 123,
+	OrderDate : 1999-02-02 10:20:30
+	details: [
+		{
+			ProductID: 123,
+			ProductName: IPhone,
+			UnitPrice: 20,000,
+			Qty: 20
+		},
+		{
+			ProductID: 123,
+			ProductName: IPhone,
+			UninPrice: 20,000,
+			Qty: 20
+		},
+		{
+			ProductID: 123,
+			ProductName: IPhone,
+			UninPrice: 20,000,
+			Qty: 20
+		}
+	]
+}
+--------------------------------------
+{
+	"CustomID":"HANAR",
+	"CustomName":"HANAR",
+	"EmployeeID":"HANAR",
+	"LastName":"HANAR",
+	"details":
+		[
+			{
+				"UnitPrice":9.65,
+				"ProductName":"Jack's New England Clam Chowder",
+				"Qty":10,
+				"ProductID":41
+			},
+			{
+				"UnitPrice":53,
+				"ProductName":"Manjimup Dried Apples",
+				"Qty":35,
+				"ProductID":51
+			},
+			{
+				"UnitPrice":21.05,
+				"ProductName":"Louisiana Fiery Hot Pepper Sauce",
+				"Qty":15,
+				"ProductID":65
+			}
+		],
+				
+	"OrderID":10250,
+	"OrderDate":"1996-07-08T00:00"
+}
+
+
+
