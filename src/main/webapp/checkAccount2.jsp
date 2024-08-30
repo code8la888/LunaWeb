@@ -1,6 +1,3 @@
-<%@page import="java.util.Base64"%>
-<%@page import="tw.luna.apis.Member"%>
-<%@page import="javax.servlet.jsp.jstl.sql.Result"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
 <%@ page import="org.mindrot.*" %>    
@@ -20,26 +17,10 @@
 	<sql:param>${param.account }</sql:param>
 </sql:query>
 <c:if test="${rs.rowCount == 0 }"><c:redirect url="login.jsp"></c:redirect></c:if>
+${rs.rows[0].account } : ${rs.rows[0].passwd } : ${rs.rows[0].name }
 <c:choose>
 	<c:when test="${BCrypt.checkpw(param.passwd, rs.rows[0].passwd) }">
-		<%
-			Result rs = (Result)pageContext.getAttribute("rs");
-			long id = (Long)rs.getRows()[0].get("id");
-			String account = (String)rs.getRows()[0].get("account");
-			String passwd = (String)rs.getRows()[0].get("passwd");
-			String name = (String)rs.getRows()[0].get("name");
-			byte[] icon = (byte[])rs.getRows()[0].get("icon");
-			String iconBase64 = Base64.getEncoder().encodeToString(icon);
-			
-			Member member = new Member();
-			member.setId((int)id);
-			member.setAccount(account);
-			member.setPasswd(passwd);
-			member.setName(name);
-			member.setIcon(iconBase64);
-			
-			session.setAttribute("member", member);
-		%>
+		<c:set var="member" value="${rs.rows[0] }" scope="session"></c:set>
 		<c:redirect url="main.jsp"></c:redirect>
 	</c:when>
 	<c:otherwise>

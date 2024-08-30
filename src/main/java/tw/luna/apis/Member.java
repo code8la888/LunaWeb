@@ -3,7 +3,14 @@ package tw.luna.apis;
 public class Member {
 	private int id;
 	private String account, passwd, name;
-	
+	private String icon;	// base64-format
+
+	public String getIcon() {
+		return icon;
+	}
+	public void setIcon(String icon) {
+		this.icon = icon;
+	}
 	public int getId() {
 		return id;
 	}
@@ -28,8 +35,10 @@ public class Member {
 	public void setName(String name) {
 		this.name = name;
 	}
+	
 	@Override
 	public String toString() {
 		return String.format("%d : %s", id, name);
 	}
+	
 }

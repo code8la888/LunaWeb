@@ -13,7 +13,7 @@
 	Login Page
 	<hr />
 	<form action="checkAccount.jsp" method="post">
-		Account: <input name="account" /><br />
+		Account: <input name="account" /><span id="mesg"></span><br />
 		Password: <input type="password" name="passwd" /><br />
 		<input type="submit" value="Login" />
 	</form>	

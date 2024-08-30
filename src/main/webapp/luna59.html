@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>Insert title here</title>
+		<script type="text/javascript">
+	
+		window.onload=function(){
+			console.log("start"+document.cookie);
+			let aryCookies = {};
+			parsecookie();
+			
+			function cookies() {
+				let cookie = document.cookie;
+				let cookies = cookie.split(";");
+				cookies.forEach(function(item,i){
+					// item => account:brad
+					let data = item.split("=");
+					aryCookies=[data[0].trim()] = data[1].trim();
+				});
+			}
+			
+			if (aryCookies['account']){
+				document.getelementById('account').value = aryCookies['account'];
+			}if (aryCookies['passwd']){
+				document.getelementById('passwd').value = aryCookies['passwd'];
+			}if (aryCookies['remember']){
+				document.getelementById('remember').value = aryCookies['remember'];
+			}
+			
+			function  beforeSubmit() {
+				console.log("beforesubmit");
+				let account = document.getElementById('account').value;
+				let passwd = document.getElementById('passwd').value;
+				let isRemember = document.getElementById('remember').checked;
+			
+				if(isRemember){
+					document.cookie = 'account =' + account;
+					document.cookie = 'passwd =' + passwd;
+					document.cookie = 'remember =' + remember;
+					console.log("beforesubmit():"+document.cookie);
+				}else{
+					
+				}
+				return true;
+			}
+		}
+		
+		</script>
+	</head>
+	<body>
+		<form action="luna60.jsp" onsubmit = "return beforeSubmit();">
+			Account: <input name="account" id="account"><br>
+			password: <input name="passwd" id="passwd"><br>
+			<input type="checkbox" id=remember>remember me <br>
+			<input type="submit" value="login">
+		</form>
+	</body>
+</html>
